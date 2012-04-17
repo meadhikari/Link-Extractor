@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>Link Extractor</title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <script type="text/javascript">
+              function validate() {
+                      var url = document.getElementById("url");
+                      //TODO Client side validation
+                     // var match = \^(?:(?:(?:http[s]?):\/\/)|(?:www.))(?:[-_0-9a-z] .) [-_0-9a-z]{2,4}[:0-9]*[\/]*$.test(url);
+                      
+                      }
+
+                                        </script>
+                                        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+	<div id="page-wrap">
+
+				<h1>Link Extractor</h1>
+		<div id="contact-area">
+			
+			<form method="get" action="links" onsubmit="return validate()">
+				<label for="URL">URL</label>
+				<input type="text" name="url" id="url" />
+				
+				<label for="Extension">Extension:</label>
+                                <select name="extension">
+                                    <option value=".zip">.zip</option>
+                                    <option value=".pdf">.pdf</option>
+                                    <option value=".mp3">.mp3</option>
+                                    <option value=".flv">.flv</option>
+                                </select>
+				<input type="submit" name="submit" value="Extract" class="submit-button" />
+			</form>
+			
+			<div style="clear: both;"></div>
+			
+		
+		</div>
+	
+	</div>
+
+</body>
+
+</html>

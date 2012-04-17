@@ -1,0 +1,14 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+  <head>
+        <title>Ultimate Link Extractor</title>
+      </head>
+      <body>
+            <ul id="navigation" style= "list-style-type: none;">
+                  {% for item in links %}
+                          <li>{{ item }}</li>
+                        {% else %}
+                        <li>No Links found of that kind </li>
+                        {% endfor %}
+             </ul>
+
